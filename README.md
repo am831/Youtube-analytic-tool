@@ -1,7 +1,7 @@
 # Youtube Analytic Tool
 A command line app that allows the user to analyze youtube channels with the youtube data API
 
-## The app provides the following information:
+## The app provides the following information
 1. Lifetime earnings
 2. Earnings for specific videos
 3. How often each tag is used

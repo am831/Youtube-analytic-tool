@@ -34,21 +34,20 @@ func getLifetimeEarnings(videoIDs []string, videoInfo map[string]*VideoDetails,
 }
 
 func getDuration(duration string) float64 {
-	// Gets the length of a video in seconds
+	// Duration is in the format PT#H#M#S by default. This function converts
+	// the duration to seconds
 	var totalSeconds float64 = 0
 
 	if strings.Contains(duration, "H") {
 		hour, err := strconv.ParseFloat(duration[0:strings.IndexByte(duration,
-			'H')],
-			64)
+			'H')], 64)
 		handleError(err, "Error converting min to float64")
 		totalSeconds += hour * 3600
 		duration = duration[strings.IndexByte(duration, 'H')+1:]
 	}
 	if strings.Contains(duration, "M") {
 		min, err := strconv.ParseFloat(duration[0:strings.IndexByte(duration,
-			'M')],
-			64)
+			'M')], 64)
 		handleError(err, "Error converting min to float64")
 		totalSeconds += min * 60
 		duration = duration[strings.IndexByte(duration, 'M')+1:]

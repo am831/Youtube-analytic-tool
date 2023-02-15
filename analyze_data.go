@@ -61,7 +61,7 @@ func getDuration(duration string) float64 {
 	return totalSeconds
 }
 
-func getWatchHoursandEngagement(videoIDs []string,
+func getWatchHoursandEngagement(channel *ChannelDetails, videoIDs []string,
 	videoInfo map[string]*VideoDetails, percent1 float64, percent2 float64) {
 	// Calculates the watch hours for each video based on duration, views, and
 	// engagement %. Engagement % is ((likes + dislieks + comments) / views) *
@@ -69,6 +69,7 @@ func getWatchHoursandEngagement(videoIDs []string,
 	// percent1% of the video. It assumes the remaining people who viewed but
 	// didn't interact watched percent2% of the video. These values can be
 	// customized from the main menu.
+	var total float64 = 0
 	for i := len(videoIDs) - 1; i >= 0; i-- {
 		videoInfo[videoIDs[i]].engagement =
 			(float64(videoInfo[videoIDs[i]].interactions) /
@@ -80,7 +81,9 @@ func getWatchHoursandEngagement(videoIDs []string,
 					float64(videoInfo[videoIDs[i]].interactions)) *
 					(videoInfo[videoIDs[i]].durationSec * (percent2 / 100)))) /
 				3600
+		total += videoInfo[videoIDs[i]].watchHours
 	}
+	channel.totalWatchHours = total
 }
 
 func getFirstMonetizedVid(videoIDs []string,

@@ -8,14 +8,15 @@ import (
 )
 
 type ChannelDetails struct {
-	title          string
-	subs           uint64
-	views          uint64
-	videoCount     uint64
-	playlistId     string
-	totalEarnings  float64
-	firstPublished string
-	firstMonetized string
+	title           string
+	subs            uint64
+	views           uint64
+	videoCount      uint64
+	playlistId      string
+	totalEarnings   float64
+	firstPublished  string
+	firstMonetized  string
+	totalWatchHours float64
 }
 
 type VideoDetails struct {

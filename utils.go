@@ -13,9 +13,10 @@ func printMenu() {
 	fmt.Println("(4) Show how many videos it may have taken for this " +
 		"channel to be monetized")
 	fmt.Println("(5) Show earnings by month on a bar chart")
-	fmt.Println("(6) Enter custom CPM rates")
-	fmt.Println("(7) Enter custom engagement rates")
-	fmt.Println("(8) Show information about each option")
+	fmt.Println("(6) Show basic channel info")
+	fmt.Println("(7) Enter custom CPM rates")
+	fmt.Println("(8) Enter custom engagement rates")
+	fmt.Println("(9) Show information about each option")
 	fmt.Println("(0) Quit")
 }
 
@@ -63,7 +64,10 @@ func printInfo() {
 		"option is to give an idea of which months might be good for posting " +
 		"in this channel's niche.")
 	fmt.Println()
-	fmt.Println("(6) The CPM rate is the dollars earned for every 1000 " +
+	fmt.Println("(6) Shows channel name, total subscribers, total views, " +
+		"total watch hours, and number of uploaded videos.")
+	fmt.Println()
+	fmt.Println("(7) The CPM rate is the dollars earned for every 1000 " +
 		"views. The views are divided by 1000 then mulitplied by the CPM. " +
 		"Default CPM is 2 for videos under 8 min, and 5 for videos 8 min or " +
 		"more. Shorter videos may have lower CPM, because a video can't " +
@@ -72,7 +76,7 @@ func printInfo() {
 		"means that for every video under 8 min, $2 is earned for every " +
 		"1000 views. CPM rates can be customized with options (6).")
 	fmt.Println()
-	fmt.Println("(7) Engagement is considered to be a like, dislike, or " +
+	fmt.Println("(8) Engagement is considered to be a like, dislike, or " +
 		"a comment. All people who engaged with a video are assumed to have " +
 		"watched 100% of the video. All other people who viewed but didn't " +
 		"engage are assumed to have watched 25% of the video. Enagement is " +

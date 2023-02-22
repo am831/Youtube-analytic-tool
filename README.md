@@ -8,7 +8,7 @@ A command line app that allows the user to analyze youtube channels with the you
 4. How many videos it may have taken for the channel to be monetized
 5. Earnings by month on a bar chart
 
-## Intallation/Usage
+## Installation/Usage
 * Download the docker image alisha831maddy/youtube_analytic_tool
 * Get a free API key from google developer console for the youtube data API [here](https://console.cloud.google.com/marketplace/product/google/youtube.googleapis.com?q=search&referrer=search)
 * Create a .env file that contains a variable called api_key, then set it equal to your API key

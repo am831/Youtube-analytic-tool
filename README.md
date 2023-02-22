@@ -8,12 +8,12 @@ A command line app that allows the user to analyze youtube channels with the you
 4. How many videos it may have taken for the channel to be monetized
 5. Earnings by month on a bar chart
 
-## Getting started
-* Download the source code
+## Intallation/Usage
+* Download the docker image alisha831maddy/youtube_analytic_tool
 * Get a free API key from google developer console for the youtube data API [here](https://console.cloud.google.com/marketplace/product/google/youtube.googleapis.com?q=search&referrer=search)
-* Add a .env file to the app directory that contains a variable called api_key, then set it equal to your API key
+* Create a .env file that contains a variable called api_key, then set it equal to your API key
+* cd into the directory with the .env file, and run the image with the command "docker run -it --env-file ./.env alisha831maddy/youtube_analytic_tool"
 * Get the channel ID for a channel you want to analyze
-* Run or build all .go files
 
 ## How the information is calculated 
 * Earnings for a video are calculated using views, CPM rate, and duration. By default, the CPM rate for videos under 8 minutes is 2 and the default for videos 8 minutes or longer is 5. The CPM rate is the dollars earned for every 1000 views. Shorter videos may have lower CPM, because a video can't contain midroll ads unless they are 8 minutes or longer. It is assumed that a video 8 minutes or longer contains midroll ads. All videos posted before the first monetized video do not contribute to earnings.

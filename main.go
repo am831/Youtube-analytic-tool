@@ -81,8 +81,12 @@ func main() {
 				}
 				fmt.Println("Enter video ID (found in the video url):")
 				fmt.Scanln(&id)
-				fmt.Printf("The video titled %s earned %s", videoInfo[id].title,
-					strconv.FormatFloat(videoInfo[id].earnings, 'f', 2, 64))
+				_, ok := videoInfo[id]
+				if ok {
+					fmt.Printf("The video titled %s earned %s",
+						videoInfo[id].title,
+						strconv.FormatFloat(videoInfo[id].earnings, 'f', 2, 64))
+				}
 				fmt.Println()
 			}
 			fmt.Println()

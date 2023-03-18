@@ -32,7 +32,7 @@ func handleError(err error, message string) {
 func printInfo() {
 	fmt.Println("(1) Lifetime earnings are calculated using views, CPM rate, " +
 		"and duration. By default, the CPM rate for videos under 8 minutes " +
-		"is 2 and the default for videos 8 minutes or longer is 5. See (6) " +
+		"is 2 and the default for videos 8 minutes or longer is 5. See (7) " +
 		"for more details on CPM rates. All videos posted before the first " +
 		"monetized video do not contribute to earnings.")
 	fmt.Println()
@@ -46,11 +46,11 @@ func printInfo() {
 		"12 months to be eligible for monetization. From the first video " +
 		"posted, earnings and the days passed between each post are totaled " +
 		"up. If 365 days is surpassed, then the earliest post within the 365 " +
-		"day window has its earnings removed from the total watch hours, and " +
+		"day window has its watch hours removed from the total watch hours, and " +
 		"the days passed between it and the next are subtracted from the " +
 		"total days. Once 4000 watch hours within 365 days is reached, the " +
 		"next video posted is the first monetized video. Watch hours are " +
-		"calculated based on duration, views and engagement. See (7) for " +
+		"calculated based on duration, views and engagement. See (8) for " +
 		"more details on engagement rate. Many details are inaccessible, " +
 		"such as when the video accumulated the views, what the exact watch " +
 		"hours are, and how many subscribers the channel had at the time.")
@@ -74,7 +74,7 @@ func printInfo() {
 		"contain midroll ads unless they are 8 minutes or longer. It is " +
 		"assumed that a video 8 minutes or longer contains midroll ads. This " +
 		"means that for every video under 8 min, $2 is earned for every " +
-		"1000 views. CPM rates can be customized with options (6).")
+		"1000 views. CPM rates can be customized with options (7).")
 	fmt.Println()
 	fmt.Println("(8) Engagement is considered to be a like, dislike, or " +
 		"a comment. All people who engaged with a video are assumed to have " +
@@ -82,6 +82,6 @@ func printInfo() {
 		"engage are assumed to have watched 25% of the video. Enagement is " +
 		"used to calculate watch hours for videos. It affects the estimate " +
 		"for when the channel became monetized and thus the earnigns. These " +
-		"percentages can be customized with option (7).")
+		"percentages can be customized with option (8).")
 	fmt.Println()
 }
